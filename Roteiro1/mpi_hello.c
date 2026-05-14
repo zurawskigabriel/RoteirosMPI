@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 
    fscanf (host, "%s", hostname);
 
-   int myrank, //who am i
+   int myrank; //who am i
    int numprocs; //how many process
 
    MPI_Init(&argc, &argv);
@@ -24,6 +24,6 @@ int main(int argc, char **argv)
    MPI_Comm_size(MPI_COMM_WORLD, &numprocs);
    printf("Hostname: \"%s\" Rank: \"%d\" Size: \"%d\"\n", hostname, myrank, numprocs);
    MPI_Finalize();
-   
+
    return 0;
 }
